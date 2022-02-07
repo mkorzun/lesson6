@@ -14,3 +14,4 @@ RUN set -x \
     && mv /tmp/boxfuse-sample-java-war-hello/target/hello-*.war webapps
 EXPOSE 8080
 CMD ["/usr/share/tomcat9/bin/catalina.sh", "run"]
+
