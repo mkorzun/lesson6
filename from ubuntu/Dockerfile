@@ -10,7 +10,7 @@ RUN set -x \
     && mkdir /usr/share/tomcat9/conf \
     && cp -R /etc/tomcat9/* /usr/share/tomcat9/conf \
     && git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git /tmp/boxfuse-sample-java-war-hello \
-    && mvn -f /tmp/boxfuse-sample-java-war-hello/pom.xml package \
+    && mvn -f /tmp/boxfuse-sample-java-war-hello/pom.xml clean package \
     && cp /tmp/boxfuse-sample-java-war-hello/target/hello-*.war /usr/share/tomcat9/webapps \
     && apt remove --purge --auto-remove -y
 EXPOSE 8080
