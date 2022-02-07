@@ -13,4 +13,5 @@ RUN set -x \
     && mvn -f /tmp/boxfuse-sample-java-war-hello/pom.xml package \
     && cp /tmp/boxfuse-sample-java-war-hello/target/hello-*.war /usr/share/tomcat9/webapps \
     && apt remove --purge --auto-remove -y
-
+EXPOSE 8080
+CMD ["/usr/share/tomcat9/bin/catalina.sh", "run"]
