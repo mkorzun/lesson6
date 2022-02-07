@@ -1,7 +1,7 @@
 FROM ubuntu:20.04
 ENV TZ=Europe/Moscow
 RUN set -x \
-    && RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone \
+    && ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone \
     && apt update -y \
     && apt install -y default-jdk tomcat9 maven git \
     && mkdir /usr/share/tomcat9/logs \
